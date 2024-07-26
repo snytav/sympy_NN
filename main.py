@@ -19,7 +19,7 @@ def Linear(ww,x):
   for i in range(ww.shape[0]):
       f = 0
       for j in range(ww.shape[1]):
-          f[i] = f[i] + ww[i][j]*x[j]
+          f = f + ww[i][j]*x[j]
           print(j,ww[i][j],x[j],f)
       ff.append(f)
   ff = np.array(ff)
