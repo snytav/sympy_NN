@@ -12,6 +12,18 @@ Nx = 1
 xx = symbols('x0:%d:%d'%(Ny,Nx))
 print('xx ',xx)
 
+A = Matrix(3, 3, lambda i,j: Symbol('a_%d%d' % (i,j)))
+print(A)
+
+aa = symarray('a', 3)
+print(aa)
+
+for i in range(3):
+    for j in range(3):
+         var('a_%d%d' % (i,j))
+
+
+
 
 def Linear(ww,x):
   ff = []
