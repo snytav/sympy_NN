@@ -4,6 +4,19 @@ import numpy as np
 
 Nx=3
 Ny = 1
+
+def array_of_vars(Ny,Nx):
+    xx = []
+    for i in range(Ny):
+        xline = []
+        for j in range(Nx):
+            xl = var('x_%d%d' % (i,j))
+            xline.append(xl)
+        xx.append(xline)
+    return xx
+xx = array_of_vars(Nx,Ny)
+print('xx ',xx)
+
 ww = symbols('w0:%d:%d'%(Ny,Nx))
 ww = np.array(list(ww))
 ww = ww.reshape(Ny,Nx)
@@ -18,9 +31,7 @@ print(A)
 aa = symarray('a', 3)
 print(aa)
 
-for i in range(3):
-    for j in range(3):
-         var('a_%d%d' % (i,j))
+
 
 
 
