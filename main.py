@@ -9,6 +9,14 @@ Original file is located at
 
 from sympy import *
 import numpy as np
+import shutil
+
+ode_numpy_path = 'c:\\Users\\Snytnikov.A\\PycharmProjects\\ode_numpy\ode_numpy'
+
+shutil.copy(ode_numpy_path + r'\W01.txt', 'W01.txt')
+W01 = np.loadtxt('W01.txt')
+shutil.copy(ode_numpy_path+'\W00.txt','W00.txt')
+W00 = np.loadtxt('W00.txt')
 
 Nx=3
 Ny = 1
