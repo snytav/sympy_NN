@@ -54,5 +54,5 @@ print('vv ',vv)
 N = np.matmul(vv,sigma_fc1)
 print(N)
 
-dN_dx0 = diff(N,x_00)
-print(dN_dx0)
+dN0_dx0 = diff(N[0],x_00)
+print(dN0_dx0)
