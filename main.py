@@ -64,3 +64,10 @@ print(N)
 
 dN0_dx0 = diff(N[0],x_00)
 print(dN0_dx0)
+s = dN0_dx0
+for w,wn in zip(ww,W00):
+    s = s.subs(w[0],wn)
+
+t = s.evalf()
+qq = 0
+
