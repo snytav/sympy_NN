@@ -68,6 +68,10 @@ s = dN0_dx0
 for w,wn in zip(ww,W00):
     s = s.subs(w[0],wn)
 
+for v,wn in zip(vv[0],W01):
+    s = s.subs(v,wn)
+
+s = s.subs(x_00,1.0)
 t = s.evalf()
 qq = 0
 
